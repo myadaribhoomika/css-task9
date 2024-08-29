@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 40%;
+            background-color:rgb(248, 239, 239);
+        }
+       .b1,.b2,.b3{
+        background-color: orangered;
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        margin-top:200px;
+        display: inline-block;
+        margin-left: 10px;
+        
+       }
+       .b1{
+        animation-name: bounce;
+        animation:bounce 2s ease-in infinite alternate;
+       }
+       .b2{
+        animation-name: bounce;
+        animation:bounce 2s ease-in-out infinite alternate ;
+       }
+       .b3{
+        animation-name: bounce;
+        animation:bounce 2s ease-out infinite alternate;
+       }
+       
+            .c1 {  
+            width: 10px;  
+            height:10px;  
+            background-color: green;  
+            border-radius: 50%; 
+            animation-iteration-count: infinite;
+            display: inline-block;
+            margin-left: 5px;
+            align-content: center;
+            
+            }
+            .btn{
+                margin-left: 80px;
+                margin-top: 80px;
+            }
+            .c1:nth-child(1){
+                animation: preloader 1s ease-in infinite alternate ;
+                animation-delay:0s ;
+            }
+            
+            .c1:nth-child(2){
+                animation: preloader 1s ease-in-out infinite alternate;
+                animation-delay: 0.9s;
+            }
+            
+            .c1:nth-child(3){
+                animation: preloader 1s ease-out infinite alternate;
+                animation-delay: 1.5s;
+            }
+            @keyframes preloader{
+                0%{
+                    transform: scale(1);
+                    opacity: 0.3;
+                }
+                50%{
+                    transform: scale(1.2);
+                    opacity: 0.7;
+                }
+                100%{
+                    transform: scale(1.5);
+                    opacity: 1.2;
+                }
+            }
+       @keyframes bounce {
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(-130px);
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="b1"></div>
+     <div class="b2"></div>
+     <div class="b3"></div>
+     <div class="btn">
+      <div class="c1"></div>
+      <div class="c1"></div>
+      <div class="c1"></div>
+     </div>
+</body>
+</html>
